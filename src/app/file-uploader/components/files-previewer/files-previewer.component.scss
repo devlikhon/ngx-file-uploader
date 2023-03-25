@@ -1,0 +1,57 @@
+:host {
+  display: block;
+
+  .files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+
+    .file {
+      position: relative;
+      width: 100px;
+      aspect-ratio: 1/1;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .action-buttons {
+        display: none;
+        gap: 0.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.2rem 0.5rem;
+        z-index: 1;
+        background: white;
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            i {
+              color: teal;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .action-buttons {
+          display: flex;
+        }
+      }
+    }
+  }
+}

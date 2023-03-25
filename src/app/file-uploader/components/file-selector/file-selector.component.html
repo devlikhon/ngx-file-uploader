@@ -1,0 +1,5 @@
+<button type="button" (click)="openSystemFileSelector()">
+  <i class="fa-light fa-plus"></i>
+</button>
+
+<input [multiple]="multiple" (change)="onFileSelection($event)" type="file" #fileSelectorControl>
